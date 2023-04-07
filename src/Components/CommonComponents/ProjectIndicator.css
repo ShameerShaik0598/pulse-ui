@@ -1,0 +1,11 @@
+
+
+/* Thick red border */
+hr {
+  border: 1px solid white;
+}
+
+/* hr{
+  border: 10px solid white;
+  border-radius: 5px;
+} */

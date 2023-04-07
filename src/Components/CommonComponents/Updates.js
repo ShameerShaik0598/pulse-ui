@@ -1,0 +1,39 @@
+import React from "react";
+
+function Updates({ updates }) {
+  return (
+    <div className="container shadow">
+      <h3 className="text-success">Project Updates</h3>
+
+      <table className="table table-bordered table-striped table-responsive">
+        <thead className="bg-dark text-white">
+          <tr>
+            <th>Sn Id</th>
+            <th>Status of project</th>
+            <th>Date</th>
+            <th>Shedule Status</th>
+            <th>Resourcing Status</th>
+            <th>Quality Status</th>
+            <th>Client Inputs</th>
+          </tr>
+        </thead>
+        <tbody>
+          {updates?.map((update, index) => (
+            <tr key={index}>
+              <td>{update.update_id}</td>
+              <td>{update.project_status}</td>
+              <td>{update.date.toString().slice(0, 10)}</td>
+              <td>{update.schedule_status}</td>
+              <td>{update.resourcing_status}</td>
+              <td>{update.quality_status}</td>
+              <td>{update.waiting_for_client_inputs?"yes":"no"}</td>
+              {/* {console.log(update.waiting_for_client_inputs)} */}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export default Updates;
