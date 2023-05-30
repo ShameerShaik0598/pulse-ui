@@ -70,7 +70,7 @@ function TeamComposition({ project_id }) {
             </div>
 
             <div className="m-3">
-              <label>Role</label>
+              <label className="mt-2 mb-2">Role</label>
               <select
                 defaultValue="title"
                 {...register("role")}
@@ -84,7 +84,7 @@ function TeamComposition({ project_id }) {
             </div>
 
             <div className="m-3">
-              <label>Exposed To Client</label>
+              <label className="mt-2 mb-2">Exposed To Client</label>
               <select
                 {...register("exposed_to_customer")}
                 className="form-control"
@@ -94,7 +94,7 @@ function TeamComposition({ project_id }) {
               </select>
             </div>
             <div className="m-3">
-              <label>Exposed To Client</label>
+              <label className="mt-2 mb-2">Exposed To Client</label>
               <select {...register("allocation_type")} className="form-control">
                 <option value="permanent">Permanent</option>
                 <option value="temporary">Temporary</option>

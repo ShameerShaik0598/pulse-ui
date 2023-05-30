@@ -1,10 +1,12 @@
 import React from "react";
 
 function ProjectDetails({ project }) {
-  // console.log({ project });
+  // console.log("ggggggggggggggg",project);
   return (
     <div className="container mt-4 mb-4 shadow rounded">
-      <h3 className="text-warning d-block bg-black text-center p-2">Project Details</h3>
+      <h3 className="text-warning d-block bg-black text-center p-2">
+        Project Details
+      </h3>
       <div className="row text-start mt-3">
         <div className="col-4">
           <p>Project Name : {project.project_name}</p>

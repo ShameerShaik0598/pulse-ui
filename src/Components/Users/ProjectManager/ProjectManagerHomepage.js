@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
 import { clearState } from "../../../Slices/userLoginSlice";
 
+
 function ProjectManagerHomepage() {
   let { userObj, role } = useSelector((state) => state.user);
   let navigate = useNavigate();
@@ -36,8 +37,12 @@ function ProjectManagerHomepage() {
           </NavLink>
         </li>
       </div>
+      <div className="d-block  flex-end">
+          <p className="text-white fs-5">{userObj?.payload?.email}</p>
+        </div>
+          {console.log("email", userObj?.payload)}
       <div className="">
-        <p className="text-success fs-4 p-3">Welcome {userObj.name}</p>
+        <p className="text-success fs-4 p-3">Welcome {userObj?.payload?.email}</p>
       </div>
       <div>
         {/* <DisplayUsers users={users} setUsers={setUsers}/> */}

@@ -37,9 +37,8 @@ import GetAllProjectsProjectManager from "./Components/Users/ProjectManager/GetA
 import ProjectManagerHomepage from "./Components/Users/ProjectManager/ProjectManagerHomepage";
 import ProjectDetailedViewPM from "./Components/Users/ProjectManager/ProjectDetailedViewPM";
 import ProjectDetailedViewGDO from "./Components/Users/GDO/ProjectDetailedViewGDO";
-import ModifyProject from "./Components/Users/GDO/ModifyProject";
-import ResolveConcern from "./Components/Users/GDO/ResolveConcern";
 import AddResourcesRequests from "./Components/Users/GDO/AddResourceRequest";
+import ForgotPassword from "./Components/Login/ForgotPassword";
 
 function App() {
   //create BrowserRouterObj
@@ -56,6 +55,10 @@ function App() {
         {
           path: "register",
           element: <Register />,
+        },
+        {
+          path: "forgot-password",
+          element: <ForgotPassword />,
         },
         {
           path: "contact-us",
@@ -86,10 +89,6 @@ function App() {
         {
           path: "get-projectDetails-Byid/:project_id",
           element: <ProjectDetailedViewGDO />,
-        },
-        {
-          path: "resolve-concern/:project_id",
-          element: <ResolveConcern />,
         },
         {
           path: "resource-request/:project_id",
@@ -140,10 +139,6 @@ function App() {
         {
           path: "get-projectDetails-Byid/:project_id",
           element: <ProjectDetailedViewAdmin />,
-        },
-        {
-          path: "modify-project/:project_id",
-          element: <ModifyProject />,
         },
       ],
     },

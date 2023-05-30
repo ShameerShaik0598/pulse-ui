@@ -7,6 +7,7 @@ function GetAllProjectsProjectManager() {
     <div>
       <GetAllPorjects
         url={"http://localhost:1000/project-manager/get-projects"}
+        type={"pm"}
       />
     </div>
   );

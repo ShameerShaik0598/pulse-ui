@@ -37,17 +37,19 @@ function Register() {
   };
 
   return (
-    <div className="shadow rounded">
+    <div className="register col-12 col-sm-8 col-md-6 mt-5 pt-2 pb-4 m-auto mb-3 shadow rounded">
       <p className="para display-5 text-success fw-bold text-center">
         Register
       </p>
       {err && <p className="text-center text-danger fs-1">{err}</p>}
-      <div className="register col-12 col-sm-8 col-md-6 mt-5 pt-2 pb-2 m-auto ">
+      <div >
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             {/* First Name  */}
-            <div className="m-3 pb-3">
+            <div className="m-3 mt-3">
+            <div className="inputbox d-flex justify-content-between m-1">
               <lable className="form-label fw-bold">First Name</lable>
+              </div>
               <input
                 className="form-control"
                 {...register("first_name", {

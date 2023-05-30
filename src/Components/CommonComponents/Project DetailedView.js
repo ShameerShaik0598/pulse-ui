@@ -40,7 +40,7 @@ function ProjectDetailedView({ url }) {
       {/* Team Details */}
       {project.employees?.length === 0 ? (
         <p className="fs-2 text-danger m-5">
-          No Project Updates in past two weeks
+          No Team Assigned
         </p>
       ) : (
         <TeamDetails employees={project.employees} />

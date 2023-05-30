@@ -81,7 +81,7 @@ function Login() {
 
             <NavLink
               className="text-decoration-none me-4 text-primary d-flex justify-content-end"
-              to="/"
+              to="/forgot-password"
             >
               Forgot Password
             </NavLink>

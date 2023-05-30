@@ -46,9 +46,9 @@ function GdoHomepage() {
             Logout
           </NavLink>
         </li>
-        {console.log("email", userObj.payload.email)}
+        {/* {console.log("email", userObj.payload.email)} */}
         <div className="d-block  flex-end">
-          <p className="text-white fs-5">{userObj.payload.email}</p>
+          <p className="text-white fs-5">{userObj?.payload?.email}</p>
         </div>
       </div>
 
