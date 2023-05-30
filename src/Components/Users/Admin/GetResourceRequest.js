@@ -42,7 +42,7 @@ function GetResourceRequests() {
         <tbody>
           {resourceRequests.map((userObj, index) => (
             // <tr className="text-center align-middle">
-            <tr className="align-middle text-center">
+            <tr className="align-middle text-center" key={index}>
               <td className="fw-bold">{userObj.request_id}</td>
               <td>{userObj.date.toString().slice(0, 10)}</td>
               <td>{userObj.raised_by}</td>

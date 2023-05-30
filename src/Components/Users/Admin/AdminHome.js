@@ -6,10 +6,11 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
 import { clearState } from "../../../Slices/userLoginSlice";
+import GetAllPorjects from "../../CommonComponents/GetAllProjects";
 
 function AdminHomepage() {
   let { userObj, role } = useSelector((state) => state.user);
-  console.log("for naaaame", userObj);
+ 
   let navigate = useNavigate();
 
   let dispatch = useDispatch();
@@ -57,14 +58,7 @@ function AdminHomepage() {
               Add Project
             </NavLink>
           </li>
-          <li className="nav-item float-end">
-            <NavLink
-              onClick={(project_id) => navigate(`modify-project/${project_id}`)}
-            >
-              {" "}
-              Modify Project
-            </NavLink>
-          </li>
+         
           <li className="nav-item float-end">
             <NavLink
               className={({ isActive }) =>
@@ -82,6 +76,7 @@ function AdminHomepage() {
         </ul>
       </div>
       <div className="p-3">
+      
         <Outlet />
       </div>
     </div>

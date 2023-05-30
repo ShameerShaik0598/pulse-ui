@@ -43,7 +43,7 @@ function AddProjects() {
         },
       }
     );
-    //if project insertedd successfully inserted
+    //if project inserted successfully inserted
     if (res.data.message === "Project added sucessfully") {
       navigate("/admin/all-projects");
     }

@@ -45,7 +45,9 @@ function AddResourceRequest({ project_id }) {
       <div class="card">
         <div class="card-body bg-black text-warning border ">
           <h5 class="card-title text-center">Resource Request</h5>
-          <p class="card-text text-white text-center pt-2">Click here to Add Resource</p>
+          <p class="card-text text-white text-center pt-2">
+            Click here to Add Resource
+          </p>
           <button
             className="btn btn-success text-white mx-auto "
             onClick={editUser}
@@ -59,24 +61,27 @@ function AddResourceRequest({ project_id }) {
 
       <Modal show={show} onHide={closeModal} backdrop="static">
         <Modal.Header closeButton>
-          <Modal.Title>Resolve Concern</Modal.Title>
+          <Modal.Title>Resource Request</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form>
-            <input
-              type="text"
-              className="form-control"
-              {...register("resource_desc", {
-                required: "Resource Description is required",
-              })}
-              placeholder="Resource Description"
-            />
-
-            {/* Gdo input  */}
             <div className="m-3">
+              <label className="mb-2">Resource Description</label>
               <input
                 type="text"
                 className="form-control"
+                {...register("resource_desc", {
+                  required: "Resource Description is required",
+                })}
+                placeholder="Resource Description"
+              ></input>
+            </div>
+            {/* Number of resources */}
+            <div className="m-3">
+              <label className="mb-2">Number of resources </label>
+              <input
+                type="text"
+                className="form-control mt-2 mb-2"
                 {...register("no_of_resources", {
                   required: "Number of resources is required",
                 })}
